@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "IBM VGA 8x16";
+  src: url("assets/fonts/oldschool/WebPlus_IBM_VGA_8x16.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --ground: #858585;
+  --ink: #111;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--ink);
+  background: var(--ground);
+  font-family: "IBM VGA 8x16", monospace;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' seed='18' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+}
+
+.site {
+  position: relative;
+  width: min(42.5rem, calc(100% - 3rem));
+  margin: 0;
+  padding: 1rem 0 5rem 1rem;
+}
+
+.site-header {
+  display: block;
+}
+
+.wordmark {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.wordmark::before {
+  content: "> ";
+}
+
+nav {
+  display: block;
+  margin-top: .75rem;
+  font-size: 1rem;
+}
+
+nav a {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+}
+
+nav a::before {
+  content: "— ";
+}
+
+nav a[aria-current="page"]::before {
+  content: "> ";
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .25em;
+}
+
+main {
+  margin-top: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1::before {
+  content: "> ";
+}
+
+.empty {
+  margin: .25rem 0 0;
+  font-size: 1rem;
+  opacity: .72;
+}
+
+.empty::before {
+  content: "— ";
+}
+
+.project-index {
+  display: grid;
+  gap: .75rem;
+  margin: .25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-index li {
+  position: relative;
+  padding-left: 2ch;
+}
+
+.project-index li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+}
+
+.project-index a {
+  color: inherit;
+}
+
+.project-index p {
+  max-width: 32rem;
+  margin: .2rem 0 0;
+  font-family: "Nimbus Sans", Arial, sans-serif;
+  font-size: .8125rem;
+  line-height: 1.45;
+  opacity: .78;
+}
+
+.thought-list {
+  display: grid;
+  gap: .5rem;
+  margin: .25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thought-list li {
+  display: grid;
+  grid-template-columns: 3ch 1ch minmax(0, 32rem);
+  gap: 1ch;
+  align-items: start;
+}
+
+.thought-number,
+.thought-sign {
+  font-family: "IBM VGA 8x16", monospace;
+  font-size: 1rem;
+  line-height: 1.25;
+  opacity: .58;
+}
+
+.thought-sign {
+  opacity: 1;
+}
+
+.thought-list p {
+  margin: 0;
+  font-family: "Nimbus Sans", Arial, sans-serif;
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+.information-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 36rem;
+  margin: .25rem 0 0;
+}
+
+.information-list div {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.information-list dt::before {
+  content: "— ";
+}
+
+.information-list dd {
+  margin: 0;
+  font-family: "Nimbus Sans", Arial, sans-serif;
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 32rem) {
+  .information-list div {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+
+  .information-list dd {
+    padding-left: 2ch;
+  }
+}

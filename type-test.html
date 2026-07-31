@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type test — LAMONATO</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: "Terminus Test";
+      src: url("assets/fonts/terminus/TerminusTTF-4.49.3.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Terminus Test";
+      src: url("assets/fonts/terminus/TerminusTTF-Bold-4.49.3.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "IBM VGA 8x16 Test";
+      src: url("assets/fonts/oldschool/WebPlus_IBM_VGA_8x16.woff") format("woff");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "OCR-B Test";
+      src: url("assets/fonts/ocr-b/OCR-B.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    .type-tests {
+      display: grid;
+      gap: 0;
+      margin-top: 4rem;
+    }
+
+    .type-test {
+      padding-block: 2rem;
+      border-top: 1px solid rgb(17 17 17 / .28);
+    }
+
+    .type-test:last-child {
+      border-bottom: 1px solid rgb(17 17 17 / .28);
+    }
+
+    .type-name {
+      margin: 0 0 1.5rem;
+      font: 600 .6875rem/1 system-ui, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+
+    .sample-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .sample-wordmark {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+    }
+
+    .sample-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: .25rem 1rem;
+      font-size: .875rem;
+    }
+
+    .sample-copy {
+      max-width: 34rem;
+      margin: 3rem 0 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .sample-copy strong {
+      display: block;
+      margin-bottom: .65rem;
+    }
+
+    .garamond { font-family: "EB Garamond", serif; }
+    .charter { font-family: "Bitstream Charter", serif; }
+    .nimbus { font-family: "Nimbus Sans", sans-serif; }
+    .noto { font-family: "Noto Sans Display", sans-serif; }
+    .courier { font-family: "Courier Prime", monospace; }
+    .terminus {
+      font-family: "Terminus Test", monospace;
+      font-size: 16px;
+    }
+    .ibm-vga {
+      font-family: "IBM VGA 8x16 Test", monospace;
+      font-size: 16px;
+    }
+    .ocr-b {
+      font-family: "OCR-B Test", monospace;
+      font-size: 16px;
+    }
+
+    @media (max-width: 38rem) {
+      .sample-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .sample-nav {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <h1>type tests</h1>
+    <div class="type-tests">
+      <section class="type-test garamond">
+        <p class="type-name">01 · EB Garamond</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test charter">
+        <p class="type-name">02 · Bitstream Charter</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test nimbus">
+        <p class="type-name">03 · Nimbus Sans</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test noto">
+        <p class="type-name">04 · Noto Sans Display</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test courier">
+        <p class="type-name">05 · Courier Prime</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test terminus">
+        <p class="type-name">06 · Terminus</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test ibm-vga">
+        <p class="type-name">07 · IBM VGA 8×16</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+
+      <section class="type-test ocr-b">
+        <p class="type-name">08 · OCR-B · open implementation</p>
+        <div class="sample-header">
+          <span class="sample-wordmark">LAMONATO</span>
+          <span class="sample-nav">diary　 projects　 about　 contact　 information</span>
+        </div>
+        <p class="sample-copy"><strong>diary — 30 July 2026</strong>The first entry begins with a grey surface. It resembles a box kept nearby: quiet, tactile, and precise.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
