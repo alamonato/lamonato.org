@@ -226,3 +226,11 @@ h1::before {
   height: auto;
   margin-top: 0.75rem;
 }
+
+.project-index img {
+  display: block;
+  width: 100%;
+  max-width: 16rem;
+  height: auto;
+  margin-top: 0.75rem;
+}
