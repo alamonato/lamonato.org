@@ -218,3 +218,11 @@ h1::before {
     padding-left: 2ch;
   }
 }
+
+.project-index video {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  margin-top: 0.75rem;
+}
